@@ -8,6 +8,7 @@ function Home() {
              <Section
                 title="Model S"
                 description="Order Online for"
+                touchless="Touchless Delivery"
                 backgroundImg="model-s.jpg"
                 leftBtnText="Custom Order"
                 rightBtnText="Existing Inventory"
@@ -15,6 +16,7 @@ function Home() {
             <Section
                 title="Model Y"
                 description="Order Online for"
+                touchless="Touchless Delivery"
                 backgroundImg="model-y.jpg"
                 leftBtnText="Custom Order"
                 rightBtnText="Existing Inventory"
@@ -23,6 +25,7 @@ function Home() {
                 title="Model 3"
                 description="Order Online for"
                 backgroundImg="model-3.jpg"
+                touchless="Touchless Delivery"
                 leftBtnText="Custom Order"
                 rightBtnText="Existing Inventory"
             />
@@ -30,6 +33,7 @@ function Home() {
                 title="Model X"
                 description="Order Online for"
                 backgroundImg="model-x.jpg"
+                touchless="Touchless Delivery"
                 leftBtnText="Custom Order"
                 rightBtnText="Existing Inventory"
             />

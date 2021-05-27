@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function Section({title, description, leftBtnText, rightBtnText, backgroundImg}) {
+function Section({title, description, touchless, leftBtnText, rightBtnText, backgroundImg}) {
     return (
         <Wrap bgImage={backgroundImg}>
             <ItemText>
                 <Title>{ title }</Title>
-                <p>{ description } <a href="#">Touchless Delivery</a></p>
+                <p>{ description } <DescriptionLink href="#">{ touchless }</DescriptionLink></p>
             </ItemText>
 
             <Buttons>
@@ -14,11 +14,11 @@ function Section({title, description, leftBtnText, rightBtnText, backgroundImg})
                     <LeftButton>
                         {leftBtnText}
                     </LeftButton>
-
-                    <RightButton>
-                        {rightBtnText}
-                    </RightButton>
-
+                        { rightBtnText &&
+                            <RightButton>
+                              {rightBtnText}
+                            </RightButton>
+                         } 
                 </ButtonGroup>
                     <DownArrow src="../../img/arrow.svg" />
             </Buttons>
@@ -45,6 +45,14 @@ const Wrap = styled.div`
 const Title = styled.h1`
     font-weight: 600;
     margin-bottom: 10px;
+`
+const DescriptionLink = styled.a`
+    color: inherit;
+    text-underline-position: under;
+
+    &:hover {
+        font-weight: 500;
+    }    
 `
 
 const ItemText = styled.div`
