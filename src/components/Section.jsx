@@ -48,6 +48,7 @@ const Wrap = styled.div`
     align-items: center;   
 `
 const Title = styled.h1`
+    font-size: 40px;
     font-weight: 600;
     margin-bottom: 10px;
 `
@@ -106,6 +107,3 @@ const DownArrow = styled.img`
 const Buttons = styled.div`
     margin-bottom: 2%;
 `
-// const Underline = styled.a`
-
-// `

@@ -4,6 +4,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import { selectCars } from '../features/car/carSlice';
 import { useSelector } from 'react-redux';
+import Fade from 'react-reveal/Fade'
 
 
 function Header() {
@@ -14,21 +15,27 @@ function Header() {
 
     return (
         <Container>
-            <a>
-                <img src="/img/logo.svg" alt="logo" width="100px" height="80px" />
-            </a>
-
-            <Menu>
-                {cars && cars.map((car, index) =>
-                    <a key={index} href="#">{car}</a>
-                )}
-            </Menu>
-
-            <RightMenu>
-                <a href="#">Shop</a>
-                <a href="#">Tesla Account</a>
-                <CustomMenu onClick={() => setBurgerStatus(true)} />
-            </RightMenu>
+           <Fade left>
+                <a><img src="/img/logo.svg" alt="logo" width="120px" height="50px" /></a>
+           </Fade>
+            
+            
+            <Fade bottom>
+                <Menu>
+                    {cars && cars.map((car, index) =>
+                        <a key={index} href="#">{car}</a>
+                    )}
+                </Menu>
+            </Fade>
+            
+            <Fade right>
+                <RightMenu>
+                    <a href="#">Shop</a>
+                    <a href="#">Tesla Account</a>
+                    <CustomMenu onClick={() => setBurgerStatus(true)} />
+                </RightMenu>
+            </Fade>
+            
             <BurgerNav show={burgerStatus}>
                 <CloseWrapper>
                      <CustomClose onClick={() => setBurgerStatus(false)}/>        
