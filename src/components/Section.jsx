@@ -5,7 +5,7 @@ function Section({title, description, leftBtnText, rightBtnText, backgroundImg})
     return (
         <Wrap bgImage={backgroundImg}>
             <ItemText>
-                <h1>{ title }</h1>
+                <Title>{ title }</Title>
                 <p>{ description } <a href="#">Touchless Delivery</a></p>
             </ItemText>
 
@@ -41,6 +41,10 @@ const Wrap = styled.div`
     flex-direction: column; 
     justify-content: space-between;  
     align-items: center;   
+`
+const Title = styled.h1`
+    font-weight: 600;
+    margin-bottom: 10px;
 `
 
 const ItemText = styled.div`
