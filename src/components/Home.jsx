@@ -87,6 +87,11 @@ const Footer = styled.div`
     padding-bottom: 5vh;
     justify-content: center;
 
+    @media (max-width: 768px) {
+        display: inline-flex;
+        flex-direction: column;
+    }
+    
     li {
         padding: 5px 10px;
         list-style-type: none;
