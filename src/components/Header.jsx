@@ -108,7 +108,12 @@ const RightMenu = styled.div`
       font-size: 14px;
       text-transform: uppercase;
       margin-right: 10px;
+
+      @media(max-width: 768px) {
+            display: none;
     }
+    }
+    
 `
 
 const CustomMenu = styled(MenuIcon)`
