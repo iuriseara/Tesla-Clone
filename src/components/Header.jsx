@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 import styled from 'styled-components'
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
+import { selectCars } from '../features/car/carSlice';
+import { useSelector } from 'react-redux';
 
 
 function Header() {
 
     const [burgerStatus, setBurgerStatus] = useState(false);
+    const cars = useSelector(selectCars)
+    console.log(cars)
 
     return (
         <Container>
@@ -15,7 +19,9 @@ function Header() {
             </a>
 
             <Menu>
-
+                {cars && cars.map((car, index) =>
+                    <a key={index} href="#">{car}</a>
+                )}
             </Menu>
 
             <RightMenu>
@@ -71,6 +77,8 @@ const Menu = styled.div`
      justify-content: center;
      flex: 1;
         a {
+            text-decoration: none;
+            color: inherit;
             font-weight: 600;
             font-size: 14px;
             text-transform: uppercase;
